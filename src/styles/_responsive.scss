@@ -1,0 +1,73 @@
+/**
+* This files contains the mixins for Resposive Layouts
+* ! Do not write media quries in any other file apart from this
+*/
+
+$mobile-width: 400px;
+$phablet-width: 540px;
+$tablet-width: 769px;
+$laptop-width: 920px;
+$desktop-width: 1180px;
+
+@mixin mobileSmall {
+  @media (max-width: #{$mobile-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobileMedium {
+  @media (max-width: #{$phablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobileLarge {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$laptop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin portrait {
+  @media (max-width: #{$laptop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin keyboard {
+  @media (max-height: 50rem) {
+    @content;
+  }
+}
+
+html,
+body {
+  @include desktop {
+    font-size: 10px !important;
+  }
+
+  @include laptop {
+    font-size: 9.2px !important;
+  }
+
+  @include tablet {
+    font-size: 8.7px !important;
+  }
+}

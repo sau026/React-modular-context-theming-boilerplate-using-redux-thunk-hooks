@@ -1,0 +1,104 @@
+.gradient-orange {
+  @include linear-gradient("to right", $orangeDark, $orange);
+}
+.gradient-green {
+  @include linear-gradient("to right", $green, $greenLight);
+}
+.gradient-red {
+  @include linear-gradient("to right", $red, $redDark);
+}
+.gradient-gold {
+  @include linear-gradient("to right", $goldDark, $goldLight);
+}
+.gradient-red-transparent {
+  @include linear-gradient("to right", $red, rgba(0,0,0,0));
+}
+.gradient-red-transparent-reverse {
+  @include linear-gradient("to left", $red, rgba(0,0,0,0));
+}
+.gradient-green-transparent {
+  @include linear-gradient("to right", $green, rgba(0,0,0,0));
+}
+.gradient-green-transparent-reverse {
+  @include linear-gradient("to left", $green, rgba(0,0,0,0));
+}
+
+.cta {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  @extend .gradient-orange;
+  padding: 1.2rem 2.2rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+
+  &.cta--outline {
+    background: transparent;
+    border: 0.1rem solid;
+    &:hover {
+      @extend .gradient-orange;
+    }
+  }
+  
+  &.cta--outline-black {
+    color: rgba(0,0,0,0.8);
+    background: transparent;
+    border: 0.1rem solid;
+    &:hover {
+      @extend .gradient-orange;
+      color: white;
+    }
+  }
+  
+  &.cta--white {
+    color: black;
+    background: white;
+  }
+  
+  &.cta--green {
+    @extend .gradient-green;
+    color: white;
+  }
+  
+  &.cta--gold {
+    @extend .gradient-gold;
+    color: white;
+    border-radius: 0;
+  }
+  
+  &.cta--yellow {
+    background: $yellow;
+    color: white;
+  }
+  
+  &.cta--green-outline {
+    background: white;
+    color: $green;
+  }
+  
+  &.cta--red {
+    @extend .gradient-red;
+    color: white;
+  }
+  
+  &.cta--red-outline {
+    background: white;
+    color: $red;
+  }
+
+  &.cta--shadow {
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  &.cta--naked {
+    padding: 0;
+    color: $orange;
+    background: transparent;
+  }
+
+  &.cta--full {
+    width: 100%;
+  }
+}

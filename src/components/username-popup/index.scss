@@ -1,0 +1,106 @@
+@import "./../../styles/colors";
+
+//modal popup css
+.username__modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: #000000bf; /* Black w/ opacity */
+  .modal-content {
+    height: 250px;
+    position: relative;
+    background-color: #fefefe;
+    border-radius: 6px;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    .input__container {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      input {
+        border: 1px solid $purpleLight;
+        padding: 0.8rem;
+        border-radius: 3px;
+        outline: none;
+        text-align: center;
+      }
+      span {
+        color: red;
+        margin-top: 0.3rem;
+      }
+    }
+    .submit__btn__box {
+      text-align: center;
+      button {
+        border-radius: 5px;
+        cursor: pointer;
+        background: $purpleLight;
+        color: #fff;
+        box-shadow: 2px 2px 5px 0px #9c27b0;
+        outline: none;
+        width: 7rem;
+        height: 3rem;
+        font-size: 1.2rem;
+        &:hover {
+          background: #6a64d7;
+        }
+        .icon {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}
+
+/* Modal Content */
+
+@media only screen and (max-width: 480px) {
+  .modal-content {
+    width: 90%;
+  }
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.btn__disabled {
+  background: #acaace;
+}

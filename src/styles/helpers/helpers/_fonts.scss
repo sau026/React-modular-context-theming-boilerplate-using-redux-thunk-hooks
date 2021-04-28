@@ -1,0 +1,81 @@
+/**
+* [Global Font Size/Weight Styling] Default font styling starts
+*/
+.-fw-bolder {
+  font-weight: 700;
+}
+
+.-fw-bold {
+  font-weight: 600;
+}
+
+.-fw-normal {
+  font-weight: 400;
+}
+
+.-fw-light {
+  font-weight: 300;
+}
+
+.-fs-normal {
+  font-size: 1.2rem;
+}
+
+.-fs-12 {
+  font-size: 1.2rem;
+}
+
+.-fs-14 {
+  font-size: 1.4rem;
+}
+
+.-fs-16 {
+  font-size: 1.6rem;
+}
+
+.-fs-18 {
+  font-size: 1.8rem;
+}
+
+.-fs-20 {
+  font-size: 2rem;
+}
+
+.-fs-8 {
+  font-size: 0.8em;
+}
+
+.-site-text-size {
+  font-size: 1.4rem
+}
+
+/**
+* [Global Font Color Styling] Default font Color styling starts
+*/
+.-c-white {
+  color: white;
+}
+
+.-c-green {
+  color: var(--green);
+}
+
+.-c-red {
+  color: var(--danger);
+}
+
+.-c-redDark {
+  color: var(--danger);
+}
+
+.-c-orange {
+  color: var(--orange);
+}
+
+.-c-orangeDark {
+  color: var(--orange);
+}
+
+.-c-gold {
+  color: var(--yellow);
+}

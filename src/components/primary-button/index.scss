@@ -1,0 +1,24 @@
+@import "./../../styles/colors";
+
+.btn {
+  margin-top: 1rem;
+  cursor: pointer;
+  background: $purpleLight;
+  color: #fff;
+  box-shadow: 2px 2px 5px 0px #9c27b0;
+  outline: none;
+  width: 7.5rem;
+  height: 3rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;  
+  &:hover {
+    background: #6a64d7;
+    transition: 1s;
+  }
+  .icon {
+    margin-left: 1rem;
+  }
+}

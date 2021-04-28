@@ -1,0 +1,21 @@
+@import "./../../styles/colors";
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  outline: none;
+  border: none;
+  border: 1px solid #c588ff;
+  transition: background .8s;
+  cursor: pointer;
+  background: #c588ff;
+  background-color: #c588ff;
+  background-image: linear-gradient(89deg, #813abb 0, #450655 100%);
+  color: white;
+  &:hover {
+    cursor: pointer;
+    background: #3c2166;
+    background-color: #3c2166;
+    box-shadow: 0 0 2.5px 1px #9d22fc;
+  }
+}

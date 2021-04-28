@@ -1,0 +1,44 @@
+/**
+* [Global Reponsive Classes] Default Classes, useful when implementing responsive layouts
+*/
+.-c-show-on-mobilemedium {
+  display: none !important;
+
+  @include mobileMedium {
+    display: block !important;
+  }
+}
+
+.-c-hide-on-mobilemedium {
+  @include mobileMedium {
+    display: none !important;
+  }
+}
+
+.-c-hide-on-mobileLarge {
+  @include mobileLarge {
+    display: none !important;
+  }
+}
+
+.-c-show-on-mobileLarge {
+  display: none !important;
+
+  @include mobileLarge {
+    display: unset !important;
+  }
+}
+
+.-c-hide-on-portrait {
+  @include portrait {
+    display: none !important;
+  }
+}
+
+.-c-show-on-portrait {
+  display: none !important;
+
+  @include portrait {
+    display: block !important;
+  }
+}

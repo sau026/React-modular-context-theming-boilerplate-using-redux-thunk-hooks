@@ -1,0 +1,9 @@
+@import "./../../styles/colors";
+
+input {
+  width:-webkit-fill-available;
+  padding: 0.5rem;
+  &:focus {
+    outline: none;
+  }
+}

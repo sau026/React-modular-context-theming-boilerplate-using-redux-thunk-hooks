@@ -1,0 +1,19 @@
+@import "./../../styles/colors";
+@import "./../../styles/global";
+
+.register__container {
+  position: absolute;
+  margin: auto;
+  width: 25rem;
+  height: fit-content;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 1px #fff;
+  // border-style: dashed;
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0px 0px 6px 0px #f7f7f8;
+}

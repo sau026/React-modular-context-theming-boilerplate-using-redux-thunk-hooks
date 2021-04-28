@@ -1,0 +1,29 @@
+/**
+* [Global Background Color Styling] Default Background Color styling starts
+*/
+
+.-bg-green {
+  background-color: var(--green);
+}
+
+.-bg-red {
+  background-color: var(--danger);
+}
+
+.-bg-blue {
+  background-color: var(--blue);
+}
+
+.-bg-blue-dark {
+  background-color: var(--blue);
+}
+
+
+/**
+* [Global Background asset Setting ] Default is full width and assets will algined to center
+*/
+.-bg-defaults {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

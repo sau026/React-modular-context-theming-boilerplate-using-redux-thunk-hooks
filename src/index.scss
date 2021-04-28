@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  background-color: var(--background);
+  max-height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &::after{
+    background-image: url(./assets/images/back_stair.jpg);
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    width: 100%;
+    z-index: -1;
+    content: '';
+    height: 100%;
+    opacity: 0.1;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

@@ -1,0 +1,12 @@
+.side-panel{
+  position: fixed;
+  width: 3rem;
+  max-width: 3rem; 
+}
+.main-body{
+  margin-left: 3rem;
+  height: 100vh;
+  @media only screen and (max-width: 480px) {
+    overflow: auto;
+  }
+}

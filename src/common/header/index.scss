@@ -1,0 +1,55 @@
+@import "./../../styles/colors";
+@import "../../styles/global";
+
+.header__container {
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0px 0px 6px 0px #f7f7f8;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    padding: 0;
+    width: 100%;
+  }
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    align-items: center;
+  }
+
+  .user__menu {
+    position: relative;
+    cursor: pointer;
+    .profile__popup {
+      visibility: hidden;
+      position: absolute;
+      right: 0;
+      top: 30px;
+      padding: 10px;
+      background: #370262;
+      width: 100px;
+      height: 30px;
+      border-radius: 3px;
+      transition: 0.5s;
+      opacity: 0;
+      box-shadow: 0px 0px 2px 0px #f7f7f8;
+      display: flex;
+      justify-content: center;
+      span {
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.user__menu:hover {
+  .profile__popup {
+    visibility: visible;
+    transition: 0.5s;
+    opacity: 1;
+  }
+}

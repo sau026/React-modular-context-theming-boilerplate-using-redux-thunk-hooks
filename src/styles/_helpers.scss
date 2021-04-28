@@ -1,0 +1,26 @@
+@import './helpers/backgrounds';
+@import './helpers/fonts';
+@import './helpers//responsive-classes';
+@import './helpers//text';
+@import './helpers/miscellaneous';
+@import './helpers//mixin';
+@import './helpers/buttons';
+@import './helpers/inputs';
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.heading-error-wrapper {
+  .error-message-lbl {
+    color: red;
+    display: none;
+
+    &.active {
+      display: block;
+      padding-bottom: 0.6rem;
+    }
+  }
+}

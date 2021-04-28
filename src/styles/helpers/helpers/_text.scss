@@ -1,0 +1,48 @@
+/**
+* [Global Text Styling] Default Text styling starts
+*/
+.-cp {
+  cursor: pointer;
+}
+
+.-nowrap {
+  white-space: nowrap;
+}
+
+.-ff-mono {
+  font-family: monospace;
+}
+
+.-ta-right {
+  text-align: right;
+}
+
+.-ta-center {
+  text-align: center;
+}
+
+.-ta-left {
+  text-align: left;
+}
+
+.-uppercase {
+  text-transform: uppercase;
+}
+
+.-capitalize {
+  text-transform: capitalize;
+}
+
+.-lowercase {
+  text-transform: lowercase;
+}
+
+.-underline {
+  text-decoration: underline;
+}
+
+.-to-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
