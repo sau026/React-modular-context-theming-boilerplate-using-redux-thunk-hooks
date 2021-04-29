@@ -2,6 +2,7 @@
 
 .home__heading{
   color: var(--heading);
+  transition: color 1s;
 }
 
 .container {
@@ -42,8 +43,9 @@
     .table-container-main {
       border-radius: 0.4rem;
       height: 75vh;
-      background: rgba(255, 255, 255, 0.25);
-      box-shadow: 0px 0px 6px 0px #f7f7f8;
+      background: var(--backgroungGlassyLight);
+      box-shadow: var(--boxShadowGlassy);
+      transition: background 1s;
       display: flex;
       justify-content: center;
       table {
@@ -52,7 +54,8 @@
         color: $textColor;
         height: 75vh;
         tr {
-          color: $textColor;
+          color: var(--text);
+          transition: color 1s;
           text-align: left;
           border-bottom: 1px solid #9e9e9e61;
           &:hover {
@@ -60,7 +63,8 @@
             background: #2a004e;
           }
           th {
-            color: $textColor;
+            color: var(--heading);
+            transition: color 1s;
             padding: 10px 10px;
             font-size: 14px;
             text-align: center;
@@ -81,7 +85,8 @@
           overflow-y: auto;
           td {
             font-size: 14px;
-            color: $textColor;
+            color: var(--text);
+            transition: color 1s;
             padding: 12px 10px !important;
             text-align: center;
             .messenger-batch {
@@ -128,8 +133,9 @@
       min-width: 17rem;
       border-radius: 0.4rem;
       height: fit-content;
-      background: #351253;
-      box-shadow: inset 0px 0px 4px 0px #f7f7f8;
+      transition: background 1s;
+      background: var(--backgroundSecond);
+      box-shadow: inset var(--boxShadowGlassy);
       display: flex;
       justify-content: center;
       width: 40%;
@@ -138,13 +144,15 @@
       align-items: center;
       justify-content: start;
       .data__head {
+        color: var(--heading);
+        transition: color 1s;
         background: transparent;
         width: 100%;
         height: 60px;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-bottom: 1px solid #69438a;
+        border-bottom: 1px solid var(--border);
       }
       .data__details {
         display: flex;
@@ -170,6 +178,8 @@
         span {
           display: inline-flex;
           font-size: 16px;
+          color: var(--text);
+          transition: color 1s;
           pre {
             margin: 0px;
           }

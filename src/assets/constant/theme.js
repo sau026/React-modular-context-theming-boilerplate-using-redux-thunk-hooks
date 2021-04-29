@@ -1,24 +1,54 @@
 // styles
 export const lightTheme = [
-  "--border: rgba(0,0,0,.2)",
+  "--border: #b3b1b5",
   "--shadow: #000",
-  "--heading: #6455b2",
+  "--heading: #474752",
+  "--icon: #474752",
   "--main: #1d8f13",
-  "--text: #000",
+  "--text: #474752",
   "--textAlt: #fff",
   "--inactive: rgba(0,0,0,.3)",
   "--background: #fff",
+  "--backgroundSecond: #fff",
+  "--backgroungGlassy: rgba(255, 255, 255, 0)",
+  "--backgroungGlassyLight: rgba(255, 255, 255, 0.25)",
+  "--boxShadowGlassy: 0px 0px 6px 0px #a0a0a0",
+  "--backImageOpacity: 0.1",
+  "--backImagePath: url(./assets/images/back_stair.jpg)"
 ];
 
-export const darkTheme = [
-  "--border: #c588ff",
+export const purpleTheme = [
+  "--border: #a081bd",
   "--shadow: #000",
   "--heading: #fff",
+  "--icon: #fff",
   "--main: #79248f",
   "--text: #fff",
   "--textAlt: #fff",
   "--inactive: rgba(255,255,255,.3)",
-  "--background: #2e0154"
+  "--background: #2e0154",
+  "--backgroundSecond: #351253",
+  "--backgroungGlassy: rgba(255, 255, 255, 0)",
+  "--backgroungGlassyLight: rgba(255, 255, 255, 0.25)",
+  "--boxShadowGlassy: 0px 0px 6px 0px #f7f7f8;",
+  "--backImageOpacity: 0.1",
+  "--backImagePath: url(./assets/images/back_stair.jpg)"
 ];
 
-//  background: var(--background);
+export const darkTheme = [
+  "--border: #635f66",
+  "--shadow: #000",
+  "--heading: #fff",
+  "--icon: #fff",
+  "--main: #79248f",
+  "--text: #fff",
+  "--textAlt: #fff",
+  "--inactive: rgba(255,255,255,.3)",
+  "--background: #000",
+  "--backgroundSecond: #000",
+  "--backgroungGlassy: rgba(255, 255, 255, 0)",
+  "--backgroungGlassyLight: rgba(255, 255, 255, 0.25)",
+  "--boxShadowGlassy: 0px 0px 6px 0px #f7f7f8;",
+  "--backImageOpacity: 0.4",
+  "--backImagePath: url(./assets/images/back_vill.jpg)"
+];

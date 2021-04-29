@@ -1,6 +1,7 @@
 body {
   margin: 0;
   background-color: var(--background);
+  transition: background 2s;
   max-height: 100vh;
   overflow: hidden;
   color: #fff;
@@ -10,7 +11,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   &::after{
-    background-image: url(./assets/images/back_stair.jpg);
+    background-image: url(./assets/images/treeHouse.png);
     position: absolute;
     top: auto;
     bottom: 0;
@@ -21,7 +22,7 @@ body {
     z-index: -1;
     content: '';
     height: 100%;
-    opacity: 0.1;
+    opacity: 0.25;
   }
 }
 

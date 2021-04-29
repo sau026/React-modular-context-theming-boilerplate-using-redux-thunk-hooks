@@ -1,78 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import Wrapper from "../../layouts/Wrapper";
 import Image from "../../assets/images";
+import { getAllUser } from "../../redux/actions/crudOperationAction"
 import "./index.scss";
 
 const Home = () => {
+  const allUserData = useSelector((state) => state.allUserData);
+  const dispatch = useDispatch();
   const [selecteddata, setSelectedData] = useState(null)
-  const [data, setData] = useState([
-    {
-      _id: "603a2cc602aed73645d5c52c",
-      username: "saurabh",
-      password: "12345",
-      email: "saurabh@gmail.com",
-    },
-    {
-      _id: "603d21d92757e51b60c8aea5",
-      username: "ruhi",
-      password: 12345,
-      email: "ruhi@gmail.com",
-    },
-    {
-      _id: "603d21e52757e51b60c8aea6",
-      username: "binita12",
-      password: 12345,
-      email: "binita12@gmail.com",
-    },
-    {
-      _id: "60403327884b38482844c987",
-      username: "ravi",
-      password: "12345",
-      email: "ravi@gmail.com",
-    },
-    {
-      _id: "60403381dab5c04c2c9aa78c",
-      username: "ravi",
-      password: "12345",
-      email: "ravi@gmail.com",
-    },
-    {
-      _id: "6040344e5131bd5db8346031",
-      username: "ravi",
-      password: "12345",
-      email: "ravi@gmail.com",
-    },
-    {
-      _id: "60403482e4c9972d908c7026",
-      username: "ravi",
-      password: "12345",
-      email: "ravi@gmail.com",
-    },
-    {
-      _id: "604034f3ae368e52a8b49f1a",
-      username: "ravi",
-      password: "12345",
-      email: "ravi@gmail.com",
-    },
-    {
-      _id: "604035663c37de2cd4fc966d",
-      username: "ravi",
-      password: "12345",
-      email: "ravi@gmail.com",
-    },
-    {
-      _id: "6040362e259a813cbc7bbf6c",
-      username: "ravi",
-      password: "12345",
-      email: "ravi@gmail.com",
-    },
-    {
-      _id: "604034f3ae368e52a8b49f1a",
-      username: "ravi",
-      password: "12345",
-      email: "ravi@gmail.com",
-    }
-  ]);
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    dispatch(getAllUser());
+  }, []);
+
+  useEffect(() => {
+    const data = allUserData.allUserData.result && allUserData.allUserData.result.data;
+    setData(data)
+  }, [allUserData]);
+
 
   const getTableJSX = () => {
     return (
@@ -86,7 +33,7 @@ const Home = () => {
             </tr>
           </thead>
           <tbody id="style-15">
-            {data.map((element, i) => {
+            {data && data.map((element, i) => {
               return (
                 <tr key={i} onClick={()=>setSelectedData(element)}>
                   <td>{element.username}</td>
@@ -111,7 +58,7 @@ const Home = () => {
           <h1>Data Center</h1>
         </div>
         <div className="data__details">
-          <img src="https://blog.houm.me/wp-content/uploads/2019/10/houme-1-700x700.jpg" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU7-B6570-NFXksWl3BPArESJxRo6nc5M26X_9OVnn3dvVfJrGgkw4B-J1Qbh1eoohrI8&usqp=CAU" />
           <hr></hr>
           <div className="json__data">
             <span>

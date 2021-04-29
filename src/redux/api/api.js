@@ -1,5 +1,6 @@
 import axios from 'axios';
 import BASE_URL from '../api/apiEndPoint';
+import axiosApiInstance from '../../config/httpInterceptor'
 
 let api = {};
 // var BASE_URL = 'https://infivizdev.infilect.com/api';
@@ -7,7 +8,7 @@ let api = {};
 api.get = (url) => {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await axios.get(`${BASE_URL}${url}`);
+      const response = await axiosApiInstance.get(`${BASE_URL}${url}`);
       resolve(response.data);
     } catch (error) {
       reject(error);
@@ -17,7 +18,7 @@ api.get = (url) => {
 
 api.post = async (url, parameters) => {
   return new Promise(async (resolve, reject) => {
-    axios
+    axiosApiInstance
       .post(`${BASE_URL}${url}`, parameters)
       .then(function (response) {
         resolve(response.data);
@@ -30,7 +31,7 @@ api.post = async (url, parameters) => {
 
 api.put = async (url, parameters) => {
   return new Promise(async (resolve, reject) => {
-    axios
+    axiosApiInstance
       .put(`${BASE_URL}${url}`, parameters)
       .then(function (response) {
         resolve(response.data);
@@ -43,7 +44,7 @@ api.put = async (url, parameters) => {
 
 api.delete = (url) => {
   return new Promise(async (resolve, reject) => {
-    axios
+    axiosApiInstance
       .delete(`${BASE_URL}${url}`)
       .then(function (response) {
         resolve(response.data);

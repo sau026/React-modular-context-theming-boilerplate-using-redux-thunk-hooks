@@ -5,17 +5,17 @@ button {
   padding: 0.8rem;
   outline: none;
   border: none;
-  border: 1px solid #c588ff;
+  border: 1px solid var(--border);
   transition: background .8s;
   cursor: pointer;
-  background: #c588ff;
-  background-color: #c588ff;
-  background-image: linear-gradient(89deg, #813abb 0, #450655 100%);
-  color: white;
+  background: var(--background);
+  background-color: var(--background);
+  background-image: linear-gradient(89deg, var(--background) 0, var(--backgroundSecond) 100%);
+  color: var(--text);
   &:hover {
     cursor: pointer;
-    background: #3c2166;
-    background-color: #3c2166;
-    box-shadow: 0 0 2.5px 1px #9d22fc;
+    background:  var(--backgroundSecond);
+    background-color:  var(--backgroundSecond);
+    box-shadow: var(--boxShadowGlassy);
   }
 }
