@@ -21,22 +21,23 @@
 
 //Tostify custom css
 .Toastify__toast--default {
-  box-shadow: 0px 0px 6px 0px #f7f7f8 !important;
-  background: #6a4789 !important;
+  box-shadow: var(--boxShadowGlassy) !important;
+  background: var(--backgroundSecond) !important;
 }
 
 .Toastify__progress-bar--default {
   background: linear-gradient(
     to right,
-    #e2b5dc,
-    #9a0188,
-    #69428a,
-    #c978c0,
-    #9a0188,
-    #cd83c4
+    var(--background),
+    var(--backgroundSecond),
+    var(--background),
+    var(--backgroundSecond),
+    var(--background),
+    var(--backgroundSecond)
   ) !important;
 }
 
 .Toastify__close-button--default {
+  width: 20px;
   color: #fff !important;
 }

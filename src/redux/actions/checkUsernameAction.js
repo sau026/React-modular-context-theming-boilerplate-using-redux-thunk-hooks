@@ -1,5 +1,5 @@
 import api from "../api/api";
-import { LOGIN } from "../api/apiEndPoint";
+import { LOGIN, REGISTER, UPDATE_USER } from "../api/apiEndPoint";
 
 //v1/login/
 
@@ -22,8 +22,25 @@ export const checkUserName = (data, history) => async (dispatch) => {
   });
 };
 
+export const registerUser = (data, history) => async (dispatch) => {
+  return new Promise((resolve, reject) => {
+    dispatch(setLoading(true));
+    api
+      .post(REGISTER, data)
+      .then((response, error) => {
+        dispatch(createUser(response));
+        dispatch(setLoading(false));
+        resolve(response);
+      })
+      .catch((error) => {
+        dispatch(setLoading(false));
+        reject(error);
+      });
+  });
+};
+
 export const storeUserName = (data) => async (dispatch) => {
-  dispatch(saveUserName(data));
+  // dispatch(saveUserName(data));
 };
 
 export function setLoading(status) {
@@ -40,9 +57,9 @@ export function userName(payload) {
   };
 }
 
-export function saveUserName(payload) {
+export function createUser(payload) {
   return {
-    type: "SAVE_USER_NAME",
+    type: "CREATE_USER",
     saveUserName: payload,
   };
 }

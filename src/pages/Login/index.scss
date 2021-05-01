@@ -5,7 +5,7 @@
   position: absolute;
   margin: auto;
   width: 25rem;
-  height: 15rem;
+  height: fit-content;
   top: 0;
   bottom: 0;
   left: 0;
@@ -14,5 +14,18 @@
   padding: 1rem 2rem;
   border-radius: 0.4rem;
   background: var(--backgroungGlassyLight);
-  box-shadow: var(--boxShadowGlassy)
+  box-shadow: var(--boxShadowGlassy);
+  .not_reg{
+    color: var(--text);
+    margin: auto;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+  }
+  .signUp__link{
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
 }

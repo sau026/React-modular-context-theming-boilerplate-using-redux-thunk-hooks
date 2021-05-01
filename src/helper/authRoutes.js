@@ -25,7 +25,7 @@ const AuthRoute = ({
       return (
         <Redirect 
           to={{
-            pathname,
+            pathname:"/home",
             state: { from: props.location },
           }}
         />

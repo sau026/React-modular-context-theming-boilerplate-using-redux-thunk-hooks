@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { checkUserName } from "../../redux/actions/checkUsernameAction";
 import InputPrimary from "../../components/Input";
 import ButtonPrimary from "../../components/Button";
@@ -34,6 +34,7 @@ const Login = (props) => {
         <InputPrimary
           type="text"
           name="email"
+          placeholder="Enter your email"
           onChange={(e) => setUserName(e.target.value)}
         />
       </div>
@@ -43,12 +44,14 @@ const Login = (props) => {
           id="password"
           type="password"
           name="password"
+          placeholder="Enter your password"
           onChange={(e) => setUserPass(e.target.value)}
         />
       </div>
       <div className="form__control">
         <ButtonPrimary disabled={checkValid()} label="Login" onClick={getLogin} />
       </div>
+      <span className="not_reg">Not registered yet?<Link to="/register" className="signUp__link">&nbsp;Sign Up</Link></span>
     </div>
   );
 };

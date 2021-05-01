@@ -1,0 +1,14 @@
+@import "./../../styles/colors";
+@import "./../../styles/global";
+
+#alert__box__main {
+  padding: 20px 10px 10px 10px;
+  .cancel__btn {
+    background: var(--background);
+    background-color: var(--background);
+  }
+  span {
+    text-align: center;
+    font-size: 20px;
+  }
+}

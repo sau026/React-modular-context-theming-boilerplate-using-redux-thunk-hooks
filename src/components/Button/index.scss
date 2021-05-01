@@ -8,14 +8,13 @@ button {
   border: 1px solid var(--border);
   transition: background .8s;
   cursor: pointer;
-  background: var(--background);
-  background-color: var(--background);
+  background: var(--backgroundSecond);
   background-image: linear-gradient(89deg, var(--background) 0, var(--backgroundSecond) 100%);
   color: var(--text);
   &:hover {
     cursor: pointer;
-    background:  var(--backgroundSecond);
-    background-color:  var(--backgroundSecond);
+    background:  var(--background);
+    background-color:  var(--background);
     box-shadow: var(--boxShadowGlassy);
   }
 }

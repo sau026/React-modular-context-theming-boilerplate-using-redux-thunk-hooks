@@ -1,0 +1,43 @@
+@import "./../../styles/colors";
+@import "./../../styles/global";
+
+.update__user {
+  width: 100%;
+  padding: 2rem;
+  .heading{
+    font-size: 26px;
+    color: var(--heading);
+    display: block;
+    text-align: center;
+    margin: 0px auto;
+  }
+  hr{
+    width: 100%;
+    margin-top: 2rem;
+    border-bottom: 1px solid var(--border);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+  .already_account{
+    color: var(--text);
+    margin: auto;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+  }
+  .signin__link{
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  .update__form{
+    margin-top: 3rem;
+    .cancel__btn{
+      background: var(--background);
+      background-color: var(--background);
+    }
+  }
+}
+

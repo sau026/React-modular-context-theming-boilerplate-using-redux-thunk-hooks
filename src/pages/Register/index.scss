@@ -16,4 +16,18 @@
   border-radius: 0.4rem;
   background: var(--backgroungGlassyLight);
   box-shadow: var(--boxShadowGlassy);
+  .already_account{
+    color: var(--text);
+    margin: auto;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+  }
+  .signin__link{
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
 }
+

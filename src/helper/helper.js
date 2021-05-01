@@ -23,3 +23,8 @@ export const checkAuthorization = () => {
 
   return false;
 };
+
+export const handleLogout = () => {
+  localStorage.removeItem('token')
+  browserRedirect('/login')
+}

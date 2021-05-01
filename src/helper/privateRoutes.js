@@ -15,9 +15,9 @@ const PrivateRoute = ({
         <Route
           {...rest}
           render={props =>
-            <div className="privateLayout">
+            <div>
               <Header />
-              <Component {...rest} {...props} />
+              <Component {...rest} />
             </div>
           }
         />
