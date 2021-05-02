@@ -13,7 +13,7 @@ Before you dive into anything, see for yourself how easy you can setup a full wo
 Step 1: Clone this repo
 ```
 git clone https://github.com/sau026/React-redux-thunk-modular-context-theming-boilerplate
-cd React-redux-thunk-modular-context-theming-boilerplate
+React-modular-context-theming-boilerplate-using-redux-thunk-hooks-main
 ```
 
 Step 2: Install
