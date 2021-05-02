@@ -10,6 +10,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import UpdateUser from "../../components/UpdateUserView";
 import CustomAlert from "../../components/CustomAlert";
+import CONSTANT from "../../assets/constant/constant"
 import "./index.scss";
 
 const Home = () => {

@@ -4,6 +4,7 @@ import { useHistory, Link } from "react-router-dom";
 import { checkUserName } from "../../redux/actions/checkUsernameAction";
 import InputPrimary from "../../components/Input";
 import ButtonPrimary from "../../components/Button";
+import CONSTANT from "../../assets/constant/constant"
 import "./index.scss";
 
 const Login = (props) => {
@@ -30,7 +31,7 @@ const Login = (props) => {
   return (
     <div className="login__container">
       <div className="form__control">
-        <label>Username</label>
+        <label>{CONSTANT.USERNAME}</label>
         <InputPrimary
           type="text"
           name="email"
@@ -39,7 +40,7 @@ const Login = (props) => {
         />
       </div>
       <div className="form__control">
-        <label>Password</label>
+        <label>{CONSTANT.PASSWORD}</label>
         <InputPrimary
           id="password"
           type="password"
@@ -49,7 +50,7 @@ const Login = (props) => {
         />
       </div>
       <div className="form__control">
-        <ButtonPrimary disabled={checkValid()} label="Login" onClick={getLogin} />
+        <ButtonPrimary disabled={checkValid()} label={CONSTANT.LOGIN} onClick={getLogin} />
       </div>
       <span className="not_reg">Not registered yet?<Link to="/register" className="signUp__link">&nbsp;Sign Up</Link></span>
     </div>

@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { registerUser } from "../../redux/actions/checkUsernameAction";
 import InputPrimary from "../../components/Input";
 import ButtonPrimary from "../../components/Button";
+import CONSTANT from "../../assets/constant/constant"
 import "./index.scss";
 
 const Register = () => {
@@ -45,7 +46,7 @@ const Register = () => {
   return (
     <div className="register__container">
       <div className="form__control">
-        <label>Username</label>
+        <label>{CONSTANT.USERNAME}</label>
         <InputPrimary
           type="text"
           name="username"
@@ -54,7 +55,7 @@ const Register = () => {
         />
       </div>
       <div className="form__control">
-        <label>Email</label>
+        <label>{CONSTANT.EMAIL}</label>
         <InputPrimary
           type="text"
           name="email"
@@ -63,7 +64,7 @@ const Register = () => {
         />
       </div>
       <div className="form__control">
-        <label>Password</label>
+        <label>{CONSTANT.PASSWORD}</label>
         <InputPrimary
           id="password"
           type="password"
@@ -73,7 +74,7 @@ const Register = () => {
         />
       </div>
       <div className="form__control">
-        <label>Confirm Password</label>
+        <label>{CONSTANT.CONFIRM_PASSWORD}</label>
         <InputPrimary
           id="password"
           type="password"
@@ -85,7 +86,7 @@ const Register = () => {
       <div className="form__control">
         <ButtonPrimary
           disabled={checkValid()}
-          label="Register"
+          label={CONSTANT.REGISTER}
           onClick={getRegistered}
         />
       </div>
