@@ -34,8 +34,6 @@ And Done, as easy as 123!!
 
 React Redux Boilerplate is a full fledged __PRODUCTION READY__ workflow boilerplate for building complex React / Redux application.
 
-This app is for highly sclable project and the architecture is very reusable. I have handled three different theming mode in this boilerplate whic will looks so pretty
-
 This app is for a highly scalable project and the architecture is very reusable. I have handled three different theming modes in this boilerplate which will look so pretty.
 
 Features:-- 
