@@ -12,7 +12,7 @@ const CustomAlert = (props) => {
   const dispatch = useDispatch();
   const history = useHistory();
   const allUserData = useSelector((state) => state.allUserData);
-
+  
   return (
     <div id="alert__box__main" {...props}>
       <span>Are you sure want to delete this user?</span>

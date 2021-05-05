@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { registerUser } from "../../redux/actions/checkUsernameAction";
 import InputPrimary from "../../components/Input";
 import ButtonPrimary from "../../components/Button";
-import CONSTANT from "../../assets/constant/constant"
+import CONSTANT from "../../assets/constant/constant";
 import "./index.scss";
 
 const Register = () => {
@@ -16,6 +16,7 @@ const Register = () => {
   const [userEmail, setUserEmail] = useState(null);
   const [userPass, setUserPass] = useState(null);
   const [confirmPass, setConfirmPass] = useState(null);
+  const [loader, setLoader] = useState(false);
 
   const checkValid = () => {
     if (userName && userPass && confirmPass && userEmail) {
@@ -28,18 +29,16 @@ const Register = () => {
   };
 
   const getRegistered = async () => {
+    setLoader(true);
     const obj = {
       username: userName,
       email: userEmail,
       password: userPass,
     };
-    const registerRes = await dispatch(registerUser(obj, history));
-    console.log("saurabh get register res:::::::::::", registerRes);
-    if (registerRes.code == 200) {
-      toast("Registered, Please Login !");
-      setTimeout(() => {
-        history.push("/login");
-      }, 1000);
+    const registerRes = await dispatch(registerUser(obj));
+    if(registerRes.code == 200) {
+      // toast("Registered, Please Login !");
+      history.push("/login");
     }
   };
 
@@ -59,7 +58,7 @@ const Register = () => {
         <InputPrimary
           type="text"
           name="email"
-          placeholder="Enter your username"
+          placeholder="Enter your email"
           onChange={(e) => setUserEmail(e.target.value)}
         />
       </div>
@@ -69,7 +68,7 @@ const Register = () => {
           id="password"
           type="password"
           name="password"
-          placeholder="Enter your username"
+          placeholder="Enter your password"
           onChange={(e) => setUserPass(e.target.value)}
         />
       </div>
@@ -88,6 +87,7 @@ const Register = () => {
           disabled={checkValid()}
           label={CONSTANT.REGISTER}
           onClick={getRegistered}
+          loader={loader}
         />
       </div>
       <span className="already_account">

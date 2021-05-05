@@ -15,6 +15,7 @@ const UpdateUser = (props) => {
   const [userName, setUserName] = useState(props.dataToUpdate.username);
   const [userEmail, setUserEmail] = useState(props.dataToUpdate.email);
   const [userPass, setUserPass] = useState(props.dataToUpdate.password);
+  const [loader, setLoader] = useState(false);
 
   const checkValid = () => {
     if (userName && userPass && userEmail) {
@@ -24,6 +25,7 @@ const UpdateUser = (props) => {
   };
 
   const updateUserData = async () => {
+    setLoader(true);
     const obj = {
       _id: props.dataToUpdate._id,
       username: userName,
@@ -34,6 +36,7 @@ const UpdateUser = (props) => {
    if(updateResponse.code == 200){
     dispatch(getAllUser());
     props.onCancelClick()
+    setLoader(true);
     toast("Data Sucessfully Updated!");
    }
   };
@@ -79,6 +82,7 @@ const UpdateUser = (props) => {
             disabled={checkValid()}
             label="Update"
             onClick={updateUserData}
+            loader={loader}
           />
            <ButtonPrimary
             label="Cancel"

@@ -22,7 +22,7 @@ export const checkUserName = (data, history) => async (dispatch) => {
   });
 };
 
-export const registerUser = (data, history) => async (dispatch) => {
+export const registerUser = (data) => async (dispatch) => {
   return new Promise((resolve, reject) => {
     dispatch(setLoading(true));
     api

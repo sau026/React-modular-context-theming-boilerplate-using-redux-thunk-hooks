@@ -12,13 +12,18 @@ const Login = (props) => {
   const dispatch = useDispatch();
   const [userName, setUserName] = useState(null);
   const [userPass, setUserPass] = useState(null);
+  const [loader, setLoader] = useState(false)
 
-  const getLogin = () => {
+  const getLogin = async () => {
+    setLoader(true);
     const obj = {
       username: userName,
       password: userPass,
     };
-    dispatch(checkUserName(obj, history));
+    const loginRes = await dispatch(checkUserName(obj, history));
+    if(loginRes){
+      setLoader(false)
+    }
   };
 
   const checkValid = () => {
@@ -35,7 +40,7 @@ const Login = (props) => {
         <InputPrimary
           type="text"
           name="email"
-          placeholder="Enter your email"
+          placeholder="Enter your username"
           onChange={(e) => setUserName(e.target.value)}
         />
       </div>
@@ -50,7 +55,7 @@ const Login = (props) => {
         />
       </div>
       <div className="form__control">
-        <ButtonPrimary disabled={checkValid()} label={CONSTANT.LOGIN} onClick={getLogin} />
+        <ButtonPrimary disabled={checkValid()} label={CONSTANT.LOGIN} onClick={getLogin} loader={loader}></ButtonPrimary>
       </div>
       <span className="not_reg">Not registered yet?<Link to="/register" className="signUp__link">&nbsp;Sign Up</Link></span>
     </div>

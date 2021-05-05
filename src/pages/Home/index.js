@@ -22,6 +22,7 @@ const Home = () => {
   const [data, setData] = useState(null);
   const [openUpdateForm, setOpenUpdateForm] = useState(false);
   const [openDeleteAlert, setOpenDeleteAlert] = useState(false);
+  const [loader, setLoader] = useState(false);
 
   useEffect(() => {
     dispatch(getAllUser());
@@ -39,10 +40,12 @@ const Home = () => {
   }
 
   const deleteUserData = () => {
+    setLoader(true);
     const obj = {
       id: dataToDelete._id
     };
     dispatch(deleteUser(obj));
+    setLoader(false);
     setOpenDeleteAlert(false);
     dispatch(getAllUser());
     toast("Data Sucessfully Delete !");
@@ -76,13 +79,13 @@ const Home = () => {
                         onClick={() => callUserUpdate(element)}
                         className="icon"
                       >
-                        <i class="fas fa-edit icon" label="Edit"></i>
+                        <i className="fas fa-edit icon" label="Edit"></i>
                       </span>
                       <span
                         onClick={() => callOpenDeleteAlert(element)}
                         className="icon"
                       >
-                        <i class="fas fa-trash icon" aria-hidden="true"></i>
+                        <i className="fas fa-trash icon" aria-hidden="true"></i>
                       </span>
                     </td>
                   </tr>
@@ -124,7 +127,7 @@ const Home = () => {
       <div className="container">
         <div className="table__section">
           {!openUpdateForm && !openDeleteAlert ?  getTableJSX() : null}
-          {openUpdateForm ? <UpdateUser dataToUpdate={dataToUpdate}  onCancelClick={(e)=>{setOpenUpdateForm(!openUpdateForm)}}/> : null}
+          {openUpdateForm ? <UpdateUser dataToUpdate={dataToUpdate} onCancelClick={(e)=>{setOpenUpdateForm(!openUpdateForm)}}/> : null}
           {openDeleteAlert ? <CustomAlert className="delete__alert" onCancelClick={(e)=>{setOpenDeleteAlert(false)}}  onConfirmClick={(e)=>{deleteUserData()}}/> : null}
         </div>
         <div className="data__view">{getDataCenterJSX()}</div>
