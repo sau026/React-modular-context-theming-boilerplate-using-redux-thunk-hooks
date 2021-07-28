@@ -1,5 +1,5 @@
 import api from "../api/api";
-import { LOGIN, REGISTER, UPDATE_USER } from "../api/apiEndPoint";
+import { LOGIN, REGISTER } from "../api/apiEndPoint";
 
 //v1/login/
 

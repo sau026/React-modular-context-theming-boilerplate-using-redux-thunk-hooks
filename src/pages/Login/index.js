@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useHistory, Link } from "react-router-dom";
 import { checkUserName } from "../../redux/actions/checkUsernameAction";
 import InputPrimary from "../../components/Input";

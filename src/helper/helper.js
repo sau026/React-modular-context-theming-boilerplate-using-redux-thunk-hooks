@@ -1,4 +1,3 @@
-import React from 'react';
 import history from '../config/history';
 
 export const browserRedirect = location => {
@@ -16,11 +15,9 @@ export const browserRedirect = location => {
 
 export const checkAuthorization = () => {
   const storedToken = localStorage.getItem('token');
-
   if (storedToken) {
     return true;
   }
-
   return false;
 };
 

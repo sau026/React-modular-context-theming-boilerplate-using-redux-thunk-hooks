@@ -1,4 +1,3 @@
-import { purple } from "@material-ui/core/colors";
 import React, { useState, useLayoutEffect } from "react";
 import { lightTheme, darkTheme, purpleTheme } from "../assets/constant/theme";
 

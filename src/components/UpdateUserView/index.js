@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { useHistory, Link } from "react-router-dom";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { getAllUser, updateUser } from "../../redux/actions/crudOperationAction";
@@ -10,8 +9,6 @@ import "./index.scss";
 
 const UpdateUser = (props) => {
   const dispatch = useDispatch();
-  const history = useHistory();
-  const updateStatus = useSelector((state) => state.allUserData.updateStatus);
   const [userName, setUserName] = useState(props.dataToUpdate.username);
   const [userEmail, setUserEmail] = useState(props.dataToUpdate.email);
   const [userPass, setUserPass] = useState(props.dataToUpdate.password);
@@ -33,7 +30,7 @@ const UpdateUser = (props) => {
       password: userPass,
     };
    const updateResponse = await dispatch(updateUser(obj, props));
-   if(updateResponse.code == 200){
+   if(updateResponse.code === 200){
     dispatch(getAllUser());
     props.onCancelClick()
     setLoader(true);

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useHistory, Link } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { registerUser } from "../../redux/actions/checkUsernameAction";
 import InputPrimary from "../../components/Input";
@@ -36,7 +36,7 @@ const Register = () => {
       password: userPass,
     };
     const registerRes = await dispatch(registerUser(obj));
-    if(registerRes.code == 200) {
+    if(registerRes.code === 200) {
       // toast("Registered, Please Login !");
       history.push("/login");
     }

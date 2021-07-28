@@ -1,10 +1,7 @@
 import React, { Suspense, lazy } from "react";
-import {  BrowserRouter as Router, Switch, withRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import PrivateRoute from './helper/privateRoutes'; // Private Routes, Will only accessible after Login
 import AuthRoute from './helper/authRoutes'; // Auth Routes, Will only accessible before login.
-import { Route } from "react-router-dom";
-
-
 
 // Lazy loading of all the components.
 const LoginRoute = lazy(() => import('./pages/Login'));

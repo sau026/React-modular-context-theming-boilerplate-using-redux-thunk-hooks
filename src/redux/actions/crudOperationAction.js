@@ -1,6 +1,5 @@
 import api from "../api/api";
 import { GET_ALL_USERS, UPDATE_USER, DELETE_USER } from "../api/apiEndPoint";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 //v1/login/
@@ -43,7 +42,6 @@ export const updateUser = (data) => async (dispatch) => {
 };
 
 export const deleteUser = (data) => async (dispatch) => {
-  const URL = DELETE_USER + '?id=' + data;
   return new Promise((resolve, reject) => {
     dispatch(setLoading(true));
     api

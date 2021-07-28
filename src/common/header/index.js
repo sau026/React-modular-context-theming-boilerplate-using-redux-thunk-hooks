@@ -17,9 +17,9 @@ const Sidebar = () => {
   };
 
   const themeSwitch = () => {
-    if(themeName == 'lightTheme'){
+    if(themeName === 'lightTheme'){
       return "🌙";
-    } else if(themeName == 'darkTheme'){
+    } else if(themeName === 'darkTheme'){
       return "🌈"
     } else{
       return "☀️"

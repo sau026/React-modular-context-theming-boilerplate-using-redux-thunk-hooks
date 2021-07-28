@@ -1,4 +1,3 @@
-import axios from 'axios';
 import BASE_URL from '../api/apiEndPoint';
 import axiosApiInstance from '../../config/httpInterceptor'
 

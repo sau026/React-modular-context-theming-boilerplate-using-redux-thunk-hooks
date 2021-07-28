@@ -18,9 +18,9 @@ axiosApiInstance.interceptors.response.use(
     return response;
   },
   (error) => {
-    if (error.response.data.code) {
-      handleLogout();
-    }
+    // if (error.response.data.code) {
+    //   handleLogout();
+    // }
     return Promise.reject(error);
   }
 );
